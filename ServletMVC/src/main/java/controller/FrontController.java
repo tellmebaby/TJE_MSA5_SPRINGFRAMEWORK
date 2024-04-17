@@ -47,7 +47,8 @@ public class FrontController extends HttpServlet{
 		System.out.println("requestURL : " + requestURL.toString());
 		System.out.println("pathInfo : " + pathInfo);
 	
-		if( requestURI.contains("/board/list.do") ) {
+		// 컨트롤러 선택
+		if( requestURI.contains("/board") ) {
 			BoardController boardController = new BoardController();
 			
 			try {
