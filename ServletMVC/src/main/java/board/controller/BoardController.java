@@ -29,7 +29,28 @@ public class BoardController {
 		
 		// 게시글 조회 - /board/read.do
 		if(requestURI.contains("read.do") ) {
-			list(modelView, request);
+			read(modelView, request);
+		}
+		
+		// 게시글 등록
+		if(requestURI.contains("insert.do") ) {
+			insert(modelView);
+		}
+		// 게시글 등록 처리
+		if(requestURI.contains("insertPro.do") ) {
+			insertPro(modelView, request);
+		}
+		// 게시글 수정
+		if(requestURI.contains("update.do") ) {
+			update(modelView, request);
+		}
+		// 게시글 수정처리
+		if(requestURI.contains("updatePro.do") ) {
+			updatePro(modelView, request);
+		}
+		// 게시글 삭제 처리
+		if(requestURI.contains("deletePro.do") ) {
+			deletePro(modelView, request);
 		}
 		
 		return modelView;
