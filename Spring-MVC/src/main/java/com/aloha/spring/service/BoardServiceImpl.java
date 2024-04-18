@@ -1,11 +1,14 @@
-package board.service;
+package com.aloha.spring.service;
 
 import java.util.List;
 
-import board.dao.BoardDAO;
-import board.dto.Board;
+import org.springframework.stereotype.Service;
+
+import com.aloha.spring.dao.BoardDAO;
+import com.aloha.spring.dto.Board;
 
 
+@Service
 public class BoardServiceImpl implements BoardService{
 
 	private BoardDAO boardDAO = new BoardDAO();
